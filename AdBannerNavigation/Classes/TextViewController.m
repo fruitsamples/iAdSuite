@@ -1,7 +1,7 @@
 /*
     File: TextViewController.m
 Abstract: A simple view controller that manages a content view and an ADBannerView
- Version: 1.0
+ Version: 1.1
 
 Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
 Inc. ("Apple") in consideration of your agreement to the following
@@ -138,8 +138,8 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
     // by default content consumes the entire view area
     CGRect contentFrame = self.view.bounds;
     // the banner still needs to be adjusted further, but this is a reasonable starting point
-    // the y value will need to be adjusted by half the banner height to get the final position
-    CGPoint bannerCenter = CGPointMake(CGRectGetMidX(contentFrame), CGRectGetMaxY(contentFrame));
+    // the y value will need to be adjusted by the banner height to get the final position
+	CGPoint bannerOrigin = CGPointMake(CGRectGetMinX(contentFrame), CGRectGetMaxY(contentFrame));
     CGFloat bannerHeight = 0.0;
     
     // First, setup the banner's content size and adjustment based on the current orientation
@@ -160,11 +160,11 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
     if(banner.bannerLoaded)
     {
         contentFrame.size.height -= bannerHeight;
-        bannerCenter.y -= bannerHeight / 2.0;
+		bannerOrigin.y -= bannerHeight;
     }
     else
     {
-        bannerCenter.y += bannerHeight / 2.0;
+		bannerOrigin.y += bannerHeight;
     }
     
     // And finally animate the changes, running layout for the content view if required.
@@ -172,10 +172,10 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
                      animations:^{
                          contentView.frame = contentFrame;
                          [contentView layoutIfNeeded];
-                         
-                         banner.center = bannerCenter;
+                         banner.frame = CGRectMake(bannerOrigin.x, bannerOrigin.y, banner.frame.size.width, banner.frame.size.height);
                      }];
 }
+
 
 -(void)viewDidUnload
 {
