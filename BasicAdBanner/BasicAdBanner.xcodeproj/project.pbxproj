@@ -13,8 +13,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* TextViewController.m */; };
+		533B8C1312A9B211004BDFA6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533B8C1112A9B211004BDFA6 /* MainWindow.xib */; };
 		6300236B11D0724900306043 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6300236A11D0724900306043 /* iAd.framework */; };
-		6335E8AD11ECE4C300E00262 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6335E8AC11ECE4C300E00262 /* MainWindow.xib */; };
 		6335E8B611ECE4EB00E00262 /* TextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6335E8B411ECE4EB00E00262 /* TextView.xib */; };
 		6335E91411EE1EA400E00262 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 6335E90D11EE1EA400E00262 /* Icon-Small.png */; };
 		6335E91511EE1EA400E00262 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6335E90E11EE1EA400E00262 /* Icon-Small@2x.png */; };
@@ -34,8 +34,8 @@
 		28D7ACF70DDB3853001CB0EB /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* BasicAdBanner_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAdBanner_Prefix.pch; sourceTree = "<group>"; };
+		533B8C1212A9B211004BDFA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		6300236A11D0724900306043 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		6335E8AC11ECE4C300E00262 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		6335E8B511ECE4EB00E00262 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TextView.xib; sourceTree = "<group>"; };
 		6335E90D11EE1EA400E00262 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		6335E90E11EE1EA400E00262 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
@@ -103,10 +103,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6335E90A11EE1EA400E00262 /* Icons */,
-				6335E8AC11ECE4C300E00262 /* MainWindow.xib */,
+				533B8C1112A9B211004BDFA6 /* MainWindow.xib */,
 				6335E8B411ECE4EB00E00262 /* TextView.xib */,
 				8D1107310486CEB800E47090 /* BasicAdBanner-Info.plist */,
+				6335E90A11EE1EA400E00262 /* Icons */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -184,13 +184,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6335E8AD11ECE4C300E00262 /* MainWindow.xib in Resources */,
 				6335E8B611ECE4EB00E00262 /* TextView.xib in Resources */,
 				6335E91411EE1EA400E00262 /* Icon-Small.png in Resources */,
 				6335E91511EE1EA400E00262 /* Icon-Small@2x.png in Resources */,
 				6335E91611EE1EA400E00262 /* Icon.png in Resources */,
 				6335E91711EE1EA400E00262 /* Icon@2x.png in Resources */,
 				6335E91811EE1EA400E00262 /* iTunesArtwork in Resources */,
+				533B8C1312A9B211004BDFA6 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +210,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		533B8C1112A9B211004BDFA6 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				533B8C1212A9B211004BDFA6 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
 		6335E8B411ECE4EB00E00262 /* TextView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -231,6 +239,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BasicAdBanner_Prefix.pch;
 				INFOPLIST_FILE = "BasicAdBanner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				PRODUCT_NAME = BasicAdBanner;
 			};
 			name = Debug;
@@ -243,6 +252,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BasicAdBanner_Prefix.pch;
 				INFOPLIST_FILE = "BasicAdBanner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				PRODUCT_NAME = BasicAdBanner;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -254,11 +264,24 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -268,12 +291,26 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};

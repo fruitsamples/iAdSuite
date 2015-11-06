@@ -1,7 +1,7 @@
 /*
     File: TextViewController.h
 Abstract: A simple view controller that manages a content view and an ADBannerView
- Version: 1.1
+ Version: 1.2
 
 Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
 Inc. ("Apple") in consideration of your agreement to the following
@@ -41,7 +41,7 @@ AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
 STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
-Copyright (C) 2010 Apple Inc. All Rights Reserved.
+Copyright (C) 2011 Apple Inc. All Rights Reserved.
 
 */
 
@@ -51,11 +51,9 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 @interface TextViewController : UIViewController <ADBannerViewDelegate>
 {
     UIView *contentView;
-    ADBannerView *banner;
 }
 
 @property(nonatomic, retain) IBOutlet UIView *contentView;
-@property(nonatomic, retain) IBOutlet ADBannerView *banner;
 
 @end
 
